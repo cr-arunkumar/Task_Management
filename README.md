@@ -1,39 +1,74 @@
-Task Management API
+# Task Management API
 
-This is a Task Management REST API built using Node.js, Express, and TypeScript. The application allows users to manage projects and tasks with secure authentication, role-based access control, file uploads, and comments. It demonstrates RESTful API design, middleware usage, database integration with MongoDB, and environment-based configuration.
+A robust RESTful API for a task management system built with Node.js, Express, and TypeScript. This application provides a comprehensive solution for managing projects and tasks, featuring secure authentication, role-based access control, file uploads, and commenting functionalities. It serves as a practical example of modern backend development practices, including RESTful API design, middleware implementation, database integration with MongoDB, and environment-based configuration.
 
-Key Features  
- JWT-based authentication  
- Role-based access control (PM & Member)  
- Project creation and management  
- Task creation, assignment, update, and deletion  
- Controlled task status flow (todo → in_progress → in_review → done)  
- File uploads for task attachments  
- Comments on tasks  
- Dashboard APIs  
- Swagger API documentation
+## ✨ Key Features
 
-Tech Stack  
-Node.js, Express.js, TypeScript, MongoDB (Mongoose), JWT, Multer, Swagger (OpenAPI), dotenv
+*   **Authentication:** Secure user authentication using JSON Web Tokens (JWT).
+*   **Role-Based Access Control (RBAC):** Differentiated permissions for Project Managers (PM) and Members.
+*   **Project Management:** Create, update, and manage projects.
+*   **Task Management:** Create, assign, update, and delete tasks with a controlled status flow (To Do → In Progress → In Review → Done).
+*   **File Uploads:** Attach files to tasks.
+*   **Comments:** Add comments to tasks for better collaboration.
+*   **Dashboard:** APIs to provide an overview of projects and tasks.
+*   **API Documentation:** Interactive API documentation with Swagger (OpenAPI).
 
-Environment Variables  
-Create a `.env` file in the root directory of the project and configure the following values:
+## 🛠️ Tech Stack
 
-PORT=3000  
-MONGODB_URI=mongodb://localhost:27017/taskdb  
-JWT_SECRET=your_jwt_secret  
-JWT_EXPIRE=7d  
-NODE_ENV=development  
-UPLOAD_DIR=uploads  
-MAX_FILE_SIZE=5242880
+*   **Backend:** Node.js, Express.js
+*   **Language:** TypeScript
+*   **Database:** MongoDB with Mongoose
+*   **Authentication:** JSON Web Tokens (JWT)
+*   **File Handling:** Multer
+*   **API Documentation:** Swagger (OpenAPI)
+*   **Environment Variables:** dotenv
 
-API Documentation  
-Swagger documentation is available at http://localhost:3000/api-docs and can be used to explore and test all available endpoints.
+## 🚀 Getting Started
 
-Run the Project  
-Install dependencies and start the development server using:
+### Prerequisites
 
-npm install  
+*   [Node.js](https://nodejs.org/en/) (v14 or later)
+*   [npm](https://www.npmjs.com/)
+*   [MongoDB](https://www.mongodb.com/)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/cr-arunkumar/Task_Management.git
+    cd Task_Management
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Set up environment variables:**
+    Create a `.env` file in the root directory and add the following variables:
+
+    ```env
+    PORT=3000
+    MONGODB_URI=mongodb://localhost:27017/taskdb
+    JWT_SECRET=your_jwt_secret
+    JWT_EXPIRE=7d
+    NODE_ENV=development
+    UPLOAD_DIR=uploads
+    MAX_FILE_SIZE=5242880
+    ```
+
+### Running the Application
+
+Start the development server with:
+
+```bash
 npm run dev
+```
 
-The server will start at http://localhost:3000.
+The server will be running at `http://localhost:3000`.
+
+## 📖 API Documentation
+
+Explore and test the API endpoints using the Swagger documentation, available at:
+
+[http://localhost:3000/api-docs](http://localhost:3000/api-docs)
